@@ -2621,7 +2621,7 @@ endp
 ;        cmp     eax, SQLITE_ROW
 ;        jne     .end_loop
 ;
-;        stdcall RenderTemplate, edi, "../../www/templates/Wasp/statistics.tpl", [.stmt], [.pSpecial]
+;        stdcall RenderTemplate, edi, "../../www/templates/MoLight/statistics.tpl", [.stmt], [.pSpecial]
 ;        mov     edi, eax
 ;
 ;.end_loop:
@@ -3129,8 +3129,8 @@ endp
 
 
 
-cDefaultSkin       text "Wasp"
-cDefaultMobileSkin text "mobile"
+cDefaultSkin       text "MoLight"
+cDefaultMobileSkin text "MoLight"
 
 proc GetDefaultSkin, .pSpecial
 begin

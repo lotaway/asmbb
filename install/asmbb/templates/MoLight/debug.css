@@ -1,0 +1,32 @@
+/* Users online table styles */
+div.debug {
+  width: 100%;
+  max-width: none;
+  margin: 8px auto 8px auto;
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 14px;
+}
+table.debug_table {
+  border-collapse: collapse;
+  border: 2px solid gray;
+  width: 100%;
+  font-size: 14px;
+}
+table.debug_table th {
+  border: 2px solid black;
+  padding: 4px;
+  max-width: 300px;
+  text-align: center;
+}
+table.debug_table td {
+  border: 2px solid gray;
+  padding: 4px;
+  max-width: 400px;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  word-break: break-all;
+}

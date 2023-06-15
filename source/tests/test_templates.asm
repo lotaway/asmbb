@@ -136,7 +136,7 @@ start:
         mov     [Special.userLang], 0
 
 ;        stdcall GetCurrentDir
-        stdcall StrDupMem, "../../www/templates/Wasp"
+        stdcall StrDupMem, "../../www/templates/MoLight"
         mov     [Special.userSkin], eax
 
         stdcall TextCreate, sizeof.TText
@@ -202,7 +202,7 @@ begin
         stdcall TextCat, esi, txt '<div class="thread">'
         mov     esi, edx
 
-        stdcall RenderTemplate, esi, "../../www/templates/Wasp/nav_thread.tpl", [.stmt2], Special
+        stdcall RenderTemplate, esi, "../../www/templates/MoLight/nav_thread.tpl", [.stmt2], Special
         mov     esi, eax
 
         stdcall GetFineTimestamp
@@ -227,7 +227,7 @@ begin
         stdcall GetFineTimestamp
         mov     [.start_time], eax
 
-        stdcall RenderTemplate, esi, "../../www/templates/Wasp/post_view.tpl", [.stmt], Special
+        stdcall RenderTemplate, esi, "../../www/templates/MoLight/post_view.tpl", [.stmt], Special
         mov     esi, eax
 
         stdcall GetFineTimestamp
@@ -242,7 +242,7 @@ begin
         stdcall GetFineTimestamp
         mov     [.start_time], eax
 
-        stdcall RenderTemplate, esi, "../../www/templates/Wasp/nav_thread.tpl", [.stmt2], Special
+        stdcall RenderTemplate, esi, "../../www/templates/MoLight/nav_thread.tpl", [.stmt2], Special
         mov     esi, eax
 
         stdcall TextCat, esi, txt '</div>'
@@ -258,7 +258,7 @@ begin
         stdcall GetFineTimestamp
         mov     [.start_time], eax
 
-        stdcall RenderTemplate, edi, "../../www/templates/Wasp/main_html_start.tpl", 0, Special
+        stdcall RenderTemplate, edi, "../../www/templates/MoLight/main_html_start.tpl", 0, Special
         mov     edi, eax
 
         stdcall GetFineTimestamp
@@ -268,7 +268,7 @@ begin
         stdcall GetFineTimestamp
         mov     [.start_time], eax
 
-        stdcall RenderTemplate, esi, "../../www/templates/Wasp/main_html_end.tpl", 0, Special
+        stdcall RenderTemplate, esi, "../../www/templates/MoLight/main_html_end.tpl", 0, Special
         mov     esi, eax
 
         stdcall GetFineTimestamp
