@@ -42,3 +42,10 @@ AsmBB has very few requirements to the running environment:
 
 There is a demo and support forum of the project, running on [https://board.asm32.info](https://board.asm32.info).
 
+## 中文教程
+
+https://blog.csdn.net/u013102711/article/details/131066594
+
+## 发布站点
+
+[https://serverswebhosting.com](https://serverswebhosting.com)
