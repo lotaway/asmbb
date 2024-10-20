@@ -1,6 +1,7 @@
 [css:common.css]
 [css:navigation.css]
 [css:toaster.css]
+[css:custom_style.css]
 
 [case:[special:lang]|
   [equ:ttlPublic=Public threads]
@@ -74,28 +75,30 @@
 </head>
 
 <body>
-  <div class="header">
-    [special:header]
-    <div class="spacer"></div>
-    <div style="text-align: left">
-      <form method="POST" action="/!skincookie">
-        <select class="skin" name="skin" onchange="this.form.submit()">
-          <option value="0">(Default)</option>
-          [special:skins=[special:skincookie]]
-        </select>
-        <noscript style="display: inline; margin-left: 0px">
-          <input type="submit" value="Go">
-        </noscript>
-      </form>
-    </div>
-    <div>
-      [case:[special:userid]
-        |<a href="/!login/">[case:[special:lang]|Login|Вход|Вход|Connexion|Anmelden]</a><br>
-          [case:[special:canregister]||<a href="/!register/">[case:[special:lang]|Register|Регистрация|Регистрация|Inscription|Registrieren]</a>]
-        |<form method="POST" action="/!logout"><input class="logout" type="submit" name="logout"
-         value="[case:[special:lang]|Logout|Изход|Выйти|Se déconnecter|Abmelden] ([enc:[special:username]])"></form>
-         <a href="/!userinfo/[url:[special:username]]">[case:[special:lang]|User profile|Профил|Профиль|Profil|Profil]</a>
-      ]
+  <div class="main_image">
+    <div class="header">
+      [special:header]
+      <div class="spacer"></div>
+      <div style="text-align: left">
+        <form method="POST" action="/!skincookie">
+          <select class="skin" name="skin" onchange="this.form.submit()">
+            <option value="0">(Default)</option>
+            [special:skins=[special:skincookie]]
+          </select>
+          <noscript style="display: inline; margin-left: 0px">
+            <input type="submit" value="Go">
+          </noscript>
+        </form>
+      </div>
+      <div>
+        [case:[special:userid]
+          |<a href="/!login/">[case:[special:lang]|Login|Вход|Вход|Connexion|Anmelden]</a><br>
+            [case:[special:canregister]||<a href="/!register/">[case:[special:lang]|Register|Регистрация|Регистрация|Inscription|Registrieren]</a>]
+          |<form method="POST" action="/!logout"><input class="logout" type="submit" name="logout"
+           value="[case:[special:lang]|Logout|Изход|Выйти|Se déconnecter|Abmelden] ([enc:[special:username]])"></form>
+           <a href="/!userinfo/[url:[special:username]]">[case:[special:lang]|User profile|Профил|Профиль|Profil|Profil]</a>
+        ]
+      </div>
     </div>
   </div>
 
