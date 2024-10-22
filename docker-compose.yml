@@ -1,19 +1,19 @@
-version: '3'
+#version: '3'
 services:
     web:
         container_name: asmbb_ubuntu
         #privileged: true
-        build: ./server
+        build: ./install
         #volumes:
         #    - "./www:/home/work/_app/nginx/html"
         ports:
-            - "80:80"
-            - "443:443"
+            - "10070:80"
+#            - "443:443"
         #command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
         #restart: always
         #cap_add:
             #- SYS_ADMIN
         security_opt:
-            #- seccomp:unconfined
-            - seccomp:"./server/patch.json"
+            - seccomp:unconfined
+#            - seccomp:"./install/patch.json"
         command: [ "/bin/sh", "-c", "/home/entry.sh && tail -f /dev/null" ]

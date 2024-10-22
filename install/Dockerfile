@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:22.04
 LABEL MAINTAINER=serverswebhosting<lotaway@foxmail.com>
 
 #ARG DEBIAN_FRONTEND=noninteractive
@@ -18,14 +18,21 @@ RUN apt-get -y clean \
 # -----------------------------------------------------------------------------
 # asmbb
 # -----------------------------------------------------------------------------
+#RUN cd /var/www/html \
+#	&& wget 'https://asm32.info/fossil/repo/asmbb/doc/trunk/install/asmbb.tar.gz' \
+#	&& tar -xvzf asmbb.tar.gz \
+#    && mv asmbb/* ./ && rm -rf asmbb/
+COPY asmbb.tar.gz /var/www/html
 RUN cd /var/www/html \
-	&& wget 'https://asm32.info/fossil/repo/asmbb/doc/trunk/install/asmbb.tar.gz' \
 	&& tar -xvzf asmbb.tar.gz \
-    && mv asmbb/* ./ && rm -rf asmbb/
+    && mv asmbb/* ./ && rm -rf asmbb/ \
+RUN chmod +x /var/www/html/engine
 # -----------------------------------------------------------------------------
 # Setting
 # -----------------------------------------------------------------------------
-COPY ./conf/default /etc/nginx/sites-enabled/default
+COPY conf/default /etc/nginx/sites-enabled/default
+COPY conf/entry.sh /home/entry.sh
+RUN chmod +x /home/entry.sh
 #RUN systemctl restart nginx
 RUN cd /var/www/html
 WORKDIR /var/www/html
