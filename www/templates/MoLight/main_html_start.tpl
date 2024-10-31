@@ -71,7 +71,7 @@
     var ActiveSkin = '[special:skin]';
     [raw:realtime.js]
   </script>
-
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1932701109982157" crossorigin="anonymous"></script>
 </head>
 
 <body>
