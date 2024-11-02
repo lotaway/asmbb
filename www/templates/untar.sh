@@ -1,3 +1,3 @@
 #!/bin/sh
-rm -r ./Light/ ./mobile/ ./Wasp/ ./MoLight/ ./Modern/ ./"Urban Sunrise"/
+rm -r ./Light/ ./Wasp/
 tar -xvzf ./templates.tar.gz

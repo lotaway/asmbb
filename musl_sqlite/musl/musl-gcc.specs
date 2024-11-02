@@ -1,0 +1,35 @@
+*asm:
+--32
+
+%rename cpp_options old_cpp_options
+
+*cpp_options:
+-nostdinc -isystem ./musl/include -isystem include%s %(old_cpp_options)
+
+*cc1:
+%(cc1_cpu) -nostdinc -isystem ./musl/include -isystem include%s
+
+*link_libgcc:
+-L./musl/lib -L .%s
+
+*libgcc:
+32/libgcc.a%s %:if-exists(libgcc_eh.a%s)
+
+*startfile:
+%{!shared: ./musl/lib/%{pie:S}crt1.o} ./musl/lib/crti.o %{shared|pie:crtbeginS.o%s;:crtbeginS.o%s}
+
+*endfile:
+%{shared|pie:crtendS.o%s;:crtendS.o%s} ./musl/lib/crtn.o
+
+*link:
+-m elf_i386 -dynamic-linker /lib/ld-musl-i386.so.1 -nostdlib %{shared:-shared} %{static:-static} %{rdynamic:-export-dynamic}
+
+*esp_link:
+
+
+*esp_options:
+
+
+*esp_cpp_options:
+
+

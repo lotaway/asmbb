@@ -1,3 +1,14 @@
+; add missing define
+; if ~ defined TSplitURL
+; struct TSplitURL
+;     scheme    dd ?
+;     host      dd ?
+;     port      dd ?
+;     path      dd ?
+;     query     dd ?
+;     fragment  dd ?
+; ends
+; end if
 
 ; Pearsons hash function table:
 
@@ -1279,6 +1290,7 @@ endl
         lea     esi, [esi+eax+1]        ; points at the start of the value
 
         stdcall StrExtractMem, edx ; remaining arguments from the stack.
+        ;stdcall StrCopyMem, edx ; remaining arguments from the stack.
         mov     ebx, eax
 
         mov     eax, ecx        ; the hash value.
@@ -2621,7 +2633,7 @@ endp
 ;        cmp     eax, SQLITE_ROW
 ;        jne     .end_loop
 ;
-;        stdcall RenderTemplate, edi, "../../www/templates/Wasp/statistics.tpl", [.stmt], [.pSpecial]
+;        stdcall RenderTemplate, edi, "../../www/templates/Light/statistics.tpl", [.stmt], [.pSpecial]
 ;        mov     edi, eax
 ;
 ;.end_loop:
@@ -2769,7 +2781,7 @@ endp
 
 
 
-
+KOI8R    = 20866    ; KOI8-R 俄语文本编码的代码页值
 
 proc StrSlugify, .hString
 begin
@@ -3129,8 +3141,8 @@ endp
 
 
 
-cDefaultSkin       text "Wasp"
-cDefaultMobileSkin text "mobile"
+cDefaultSkin       text "Light"
+cDefaultMobileSkin text "Light"
 
 proc GetDefaultSkin, .pSpecial
 begin

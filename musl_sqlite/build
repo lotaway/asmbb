@@ -116,7 +116,7 @@ else
     { wget -q -O - https://github.com/utelle/SQLite3MultipleCiphers/archive/main.tar.gz | tar -xz --strip-components=1 2> /dev/null; } || { echo >&2 "Error: Can't download SQLiteMC sources."; exit 2;}
     echo "Create amalgamation."
     chmod +x scripts/amalgamate.py
-    scripts/amalgamate.py -c scripts/sqlite3mc.c.json -s src/ > /dev/null 2>&1 || { echo >&2 "Error: Can't create SQLite amalgamation sources"; exit 4; }
+    python3 scripts/amalgamate.py -v yes -c scripts/sqlite3mc.c.json -s src/ > /dev/null 2>&1 || { echo >&2 "Error: Can't create SQLite amalgamation sources"; exit 4; }
     cp sqlite3mc_amalgamation.c ../sqlite3.c
     cd ..
     rm -rf ./sqlitemc

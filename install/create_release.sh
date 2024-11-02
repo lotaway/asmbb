@@ -8,32 +8,20 @@ mkdir asmbb
 
 pushd .
 
-echo "Compile Wasp theme styles..."
-cd ../www/templates/Wasp/
-./compile_styles.sh
+# echo "Compile Wasp theme styles..."
+# cd ../www/templates/Wasp/
+# ./compile_styles.sh
 
-echo "Compile Light theme styles..."
-cd ../Light/
-./compile_styles.sh
-
-echo "Compile mobile theme styles..."
-cd ../mobile/
-./compile_styles.sh
-
-echo "Compile MoLight theme styles..."
-cd ../MoLight/
-./compile_styles.sh
-
-echo "Compile Urban Sunrise theme styles..."
-cd ../Urban\ Sunrise/
-./compile_styles.sh
+# echo "Compile Light theme styles..."
+# cd ../Light/
+# ./compile_styles.sh
 
 popd
 
 pushd .
 
 cd ../musl_sqlite/
-./build sqlitemc
+bash ./build sqlitemc
 
 popd
 

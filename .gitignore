@@ -1,0 +1,16 @@
+# ide
+.idea
+.vscode
+# output
+.fslckout
+# download and generated files
+/install/asmbb
+/install/*.tar
+/www/templates/**/*.css
+/www/ld-musl-i386.so
+/www/libsqlite3.so
+/musl_sqlite/ld-musl-i386.so
+/musl_sqlite/libsqlite3.so
+/musl_sqlite/musl-latest.tar.gz
+/musl_sqlite/sqlite3.c
+/www/engine

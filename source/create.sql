@@ -19,8 +19,8 @@ insert into Params values ('default_lang', 0);
 insert into Params values ('user_perm', 1887);  -- permLogin + permRead + permPost + permThreadStart + permEditOwn + permDelOwn + permChat + permDownload + permAttach
 insert into Params values ('anon_perm', 3);     -- permLogin + permRead
 insert into Params values ('chat_enabled', 1);
-insert into Params values ('default_skin', 'Urban Sunrise');
-insert into Params values ('default_mobile_skin', 'Urban Sunrise');
+insert into Params values ('default_skin', 'Light');
+insert into Params values ('default_mobile_skin', 'Light');
 insert into Params values ('email_confirm', 1);
 insert into Params values ('forum_header', '<h1 style="font-weight: 800">AsmBB</h1>
 <b style="text-align: center">Power<br>
