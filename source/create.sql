@@ -22,7 +22,7 @@ insert into Params values ('chat_enabled', 1);
 insert into Params values ('default_skin', 'Light');
 insert into Params values ('default_mobile_skin', 'Light');
 insert into Params values ('email_confirm', 1);
-insert into Params values ('forum_header', '<h1 style="font-weight: 800">AsmBB</h1>
+insert into Params values ('forum_header', '<h1 style="font-weight: 900">Servers Webhosting</h1>
 <b style="text-align: center">Power<br>
 <svg version="1.1" width="64" height="16" viewBox="0 0 64 16" xmlns="http://www.w3.org/2000/svg">
  <path d="m0 6 8 10h34l-6-6 28-2-50-8 8 8z"/>

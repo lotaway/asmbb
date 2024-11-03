@@ -1,1 +1,1 @@
-../Wasp/userslist_ftr.tpl
+</table>

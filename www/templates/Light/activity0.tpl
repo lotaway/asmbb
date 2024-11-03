@@ -1,1 +1,6 @@
-../Wasp/activity0.tpl
+[case:[special:lang]|
+Unknown activity.|
+Неизвестни действие.|
+Неизвестное действие.|
+Activité inconnue.|
+Unbekannte Aktivität.]

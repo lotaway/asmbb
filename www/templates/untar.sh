@@ -1,3 +1,3 @@
 #!/bin/sh
-rm -r ./Light/ ./Wasp/
+rm -r ./Light/
 tar -xvzf ./templates.tar.gz

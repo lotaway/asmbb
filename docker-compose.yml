@@ -3,7 +3,10 @@ services:
     web:
         container_name: asmbb_ubuntu
         #privileged: true
-        build: ./install
+        build:
+            context: ./install
+            dockerfile: Dockerfile
+        # image: ${DOCKER_REGISTRY:-local}/asmbb-web:${VERSION:-latest}
         #volumes:
         #    - "./www:/home/work/_app/nginx/html"
         ports:

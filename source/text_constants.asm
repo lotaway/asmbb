@@ -101,7 +101,8 @@ cCreateAdminTitle       mtext   EN: "Create the admin account!",                
                                 FR: "Créer le compte administrateur !",         \
                                 DE: "Erstellen Sie das Adminkonto!"
 
-cThreadListTitle        mtext   EN: "Threads list ",    \
+;Threads list
+cThreadListTitle        mtext   EN: "ServersWeb.Hosting - The #1 Servers & Web Hosting Forum, Reviews, Marketplace Services ",    \
                                 BG: "Теми ",            \
                                 RU: "Темы ",            \
                                 FR: "Liste des sujets", \

@@ -508,6 +508,8 @@ begin
         jle     .pic_ok
 
         stdcall StrCompCase, [ebx+TPostFileItem.mime], "image/png"
+        ;jc     @f
+        ;stdcall StrCompCase, [ebx+TPostFileItem.mime], "image/webp"
         jnc     .update_end
 
 ; First check the forum limits:

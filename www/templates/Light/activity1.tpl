@@ -1,1 +1,6 @@
-../Wasp/activity1.tpl
+[case:[special:lang]|
+Logging in.|
+Включване.|
+Вход в систему.|
+Connecté.|
+Meldet sich an.]
